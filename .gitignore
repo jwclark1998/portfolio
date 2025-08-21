@@ -1,0 +1,27 @@
+# OS / editor
+.DS_Store
+*.swp
+.Rhistory
+.Rproj.user/
+.RData
+.ipynb_checkpoints/
+__pycache__/
+
+# Envs
+.venv/
+env/
+.conda/
+.renv/
+*.Rproj
+.env
+
+# Build artifacts
+docs/_site/
+_site/
+.quarto/
+dist/
+build/
+
+# Data (keep raw private by default)
+data/raw/
+outputs/
