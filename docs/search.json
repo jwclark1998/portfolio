@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "dge_overview.html",
+    "href": "dge_overview.html",
+    "title": "Differential Gene Expression — Project Overview",
+    "section": "",
+    "text": "This page outlines my approach to DGE analysis (DESeq2) in a way that non-specialists can follow while still being methodologically correct. &gt;s a living document; &gt;ll add runnable code and results next.IIt\n\n\n\nGoal: Compare two conditions to find genes with statistically reliable expression changes.\nMethod (planned): DESeq2 negative binomial model with FDR control; LFC shrinkage for interpretability.\nOutputs (coming soon): PCA (QC), MA plot, volcano plot, top-table with FDR, brief biological interpretation.\n\n\n\n\nWe measure how much each geneacross samples. After normalizing for technical effects, we test whether the difference between conditions is larger than &gt;d expect by chance. We then control the false discovery rate (FDR) so our listgenes is reliable. changedof we onis\n\n\n\n\nQC & normalization (library size, variance-stabilizing transform)\nModeling with design formula (e.g., ~ batch + condition)\nMultiple testing correction (Hochberg FDR)Benjamini\nEffect size shrinkage (apeglm) for clearer log2 fold changes\nVisualization: PCA, MA plot, volcano, heatmap of top genes\nReporting: concise table + short interpretation\n\n\n\n\n\nDESeq2 handles count data with a negative binomial model.\nFDR keeps expected false positives manageable across thousands of genes.\nShrinkage improves effect-size estimates for low counts.\n\n\n\n\n\nAdd a small public dataset (Bioconductor airway).\nAdd runnable code blocks and figures.\nSave results to outputs/ and link them here.\n\n\n\n\nQuestions or feedback?\n- Email: jwclark1998@gmail.com - GitHub: @jwclark1998"
+  },
+  {
+    "objectID": "dge_overview.html#tldr",
+    "href": "dge_overview.html#tldr",
+    "title": "Differential Gene Expression — Project Overview",
+    "section": "",
+    "text": "Goal: Compare two conditions to find genes with statistically reliable expression changes.\nMethod (planned): DESeq2 negative binomial model with FDR control; LFC shrinkage for interpretability.\nOutputs (coming soon): PCA (QC), MA plot, volcano plot, top-table with FDR, brief biological interpretation."
+  },
+  {
+    "objectID": "dge_overview.html#audience-friendly-summary",
+    "href": "dge_overview.html#audience-friendly-summary",
+    "title": "Differential Gene Expression — Project Overview",
+    "section": "",
+    "text": "We measure how much each geneacross samples. After normalizing for technical effects, we test whether the difference between conditions is larger than &gt;d expect by chance. We then control the false discovery rate (FDR) so our listgenes is reliable. changedof we onis"
+  },
+  {
+    "objectID": "dge_overview.html#planned-workflow-high-level",
+    "href": "dge_overview.html#planned-workflow-high-level",
+    "title": "Differential Gene Expression — Project Overview",
+    "section": "",
+    "text": "QC & normalization (library size, variance-stabilizing transform)\nModeling with design formula (e.g., ~ batch + condition)\nMultiple testing correction (Hochberg FDR)Benjamini\nEffect size shrinkage (apeglm) for clearer log2 fold changes\nVisualization: PCA, MA plot, volcano, heatmap of top genes\nReporting: concise table + short interpretation"
+  },
+  {
+    "objectID": "dge_overview.html#why-these-choices-brief",
+    "href": "dge_overview.html#why-these-choices-brief",
+    "title": "Differential Gene Expression — Project Overview",
+    "section": "",
+    "text": "DESeq2 handles count data with a negative binomial model.\nFDR keeps expected false positives manageable across thousands of genes.\nShrinkage improves effect-size estimates for low counts."
+  },
+  {
+    "objectID": "dge_overview.html#next-steps",
+    "href": "dge_overview.html#next-steps",
+    "title": "Differential Gene Expression — Project Overview",
+    "section": "",
+    "text": "Add a small public dataset (Bioconductor airway).\nAdd runnable code blocks and figures.\nSave results to outputs/ and link them here."
+  },
+  {
+    "objectID": "dge_overview.html#contact",
+    "href": "dge_overview.html#contact",
+    "title": "Differential Gene Expression — Project Overview",
+    "section": "",
+    "text": "Questions or feedback?\n- Email: jwclark1998@gmail.com - GitHub: @jwclark1998"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Justin Clark’s Bioinformatics Portfolio",
+    "section": "",
+    "text": "Welcome\nThis is my bioinformatics portfolio. Start here:\n\nDifferential Gene Project OverviewExpression"
+  }
+]

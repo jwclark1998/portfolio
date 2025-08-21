@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Differential Gene Expression — Project Overview – Justin Clark’s Bioinformatics Portfolio</title>
+<title>Justin Clark’s Bioinformatics Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,11 +89,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./dge_overview.html" aria-current="page"> 
+    <a class="nav-link" href="./dge_overview.html"> 
 <span class="menu-text">DGE Overview</span></a>
   </li>  
 </ul>
@@ -112,15 +112,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-this-page-is" id="toc-what-this-page-is" class="nav-link active" data-scroll-target="#what-this-page-is">What this page is</a>
-  <ul class="collapse">
-  <li><a href="#tldr" id="toc-tldr" class="nav-link" data-scroll-target="#tldr">TL;DR</a></li>
-  <li><a href="#audience-friendly-summary" id="toc-audience-friendly-summary" class="nav-link" data-scroll-target="#audience-friendly-summary">Audience-friendly summary</a></li>
-  <li><a href="#planned-workflow-high-level" id="toc-planned-workflow-high-level" class="nav-link" data-scroll-target="#planned-workflow-high-level">Planned workflow (high level)</a></li>
-  <li><a href="#why-these-choices-brief" id="toc-why-these-choices-brief" class="nav-link" data-scroll-target="#why-these-choices-brief">Why these choices (brief)</a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next steps</a></li>
-  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
-  </ul></li>
+  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a></li>
   </ul>
 </nav>
     </div>
@@ -129,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Differential Gene Expression — Project Overview</h1>
+<h1 class="title">Justin Clark’s Bioinformatics Portfolio</h1>
 </div>
 
 
@@ -146,55 +138,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="what-this-page-is" class="level1">
-<h1>What this page is</h1>
-<p>This page outlines my approach to DGE analysis (DESeq2) in a way that <strong>non-specialists</strong> can follow while still being methodologically correct. &gt;s a living document; &gt;ll add runnable code and results next.IIt</p>
-<section id="tldr" class="level2">
-<h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
+<section id="welcome" class="level1">
+<h1>Welcome</h1>
+<p>This is my bioinformatics portfolio. Start here:</p>
 <ul>
-<li>Goal: Compare two conditions to find genes with statistically reliable expression changes.</li>
-<li>Method (planned): DESeq2 negative binomial model with FDR control; LFC shrinkage for interpretability.</li>
-<li>Outputs (coming soon): PCA (QC), MA plot, volcano plot, top-table with FDR, brief biological interpretation.</li>
+<li><a href="dge_overview.html">Differential Gene Project Overview</a>Expression</li>
 </ul>
-</section>
-<section id="audience-friendly-summary" class="level2">
-<h2 class="anchored" data-anchor-id="audience-friendly-summary">Audience-friendly summary</h2>
-<p>We measure how much each geneacross samples. After normalizing for technical effects, we test whether the difference between conditions is larger than &gt;d expect by chance. We then control the <strong>false discovery rate (FDR)</strong> so our listgenes is reliable. changedof we onis</p>
-</section>
-<section id="planned-workflow-high-level" class="level2">
-<h2 class="anchored" data-anchor-id="planned-workflow-high-level">Planned workflow (high level)</h2>
-<ol type="1">
-<li><strong>QC &amp; normalization</strong> (library size, variance-stabilizing transform)</li>
-<li><strong>Modeling</strong> with design formula (e.g., <code>~ batch + condition</code>)</li>
-<li><strong>Multiple testing correction</strong> (Hochberg FDR)Benjamini</li>
-<li><strong>Effect size shrinkage</strong> (apeglm) for clearer log2 fold changes</li>
-<li><strong>Visualization</strong>: PCA, MA plot, volcano, heatmap of top genes</li>
-<li><strong>Reporting</strong>: concise table + short interpretation</li>
-</ol>
-</section>
-<section id="why-these-choices-brief" class="level2">
-<h2 class="anchored" data-anchor-id="why-these-choices-brief">Why these choices (brief)</h2>
-<ul>
-<li><strong>DESeq2</strong> handles count data with a negative binomial model.</li>
-<li><strong>FDR</strong> keeps expected false positives manageable across thousands of genes.</li>
-<li><strong>Shrinkage</strong> improves effect-size estimates for low counts.</li>
-</ul>
-</section>
-<section id="next-steps" class="level2">
-<h2 class="anchored" data-anchor-id="next-steps">Next steps</h2>
-<ul>
-<li>Add a small public dataset (Bioconductor <em>airway</em>).</li>
-<li>Add runnable code blocks and figures.</li>
-<li>Save results to <code>outputs/</code> and link them here.</li>
-</ul>
-</section>
-<section id="contact" class="level2">
-<h2 class="anchored" data-anchor-id="contact">Contact</h2>
-<p>Questions or feedback?<br>
-- Email: jwclark1998@gmail.com - GitHub: <span class="citation" data-cites="jwclark1998">@jwclark1998</span></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

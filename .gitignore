@@ -25,3 +25,5 @@ build/
 # Data (keep raw private by default)
 data/raw/
 outputs/
+
+/.quarto/

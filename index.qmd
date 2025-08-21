@@ -1,0 +1,9 @@
+---
+title: "Justin Clark's Bioinformatics Portfolio"
+format: html
+---
+
+# Welcome
+This is my bioinformatics portfolio. Start here:
+
+- [Differential Gene  Project Overview](dge_overview.html)Expression 
