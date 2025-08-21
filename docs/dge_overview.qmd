@@ -1,0 +1,38 @@
+---
+title: "Differential Gene Expression — Project Overview"
+format: html
+---
+
+# What this page is
+This page outlines my approach to DGE analysis (DESeq2) in a way that **non-specialists** can follow while still being methodologically correct. >s a living document; >ll add runnable code and results next.IIt
+
+## TL;DR
+- Goal: Compare two conditions to find genes with statistically reliable expression changes.
+- Method (planned): DESeq2 negative binomial model with FDR control; LFC shrinkage for interpretability.
+- Outputs (coming soon): PCA (QC), MA plot, volcano plot, top-table with FDR, brief biological interpretation.
+
+## Audience-friendly summary
+We measure how much each geneacross samples. After normalizing for technical effects, we test whether the difference between conditions is larger than >d expect by chance. We then control the **false discovery rate (FDR)** so our listgenes is reliable. changedof we onis 
+
+## Planned workflow (high level)
+1. **QC & normalization** (library size, variance-stabilizing transform)
+2. **Modeling** with design formula (e.g., `~ batch + condition`)
+3. **Multiple testing correction** (Hochberg FDR)Benjamini
+4. **Effect size shrinkage** (apeglm) for clearer log2 fold changes
+5. **Visualization**: PCA, MA plot, volcano, heatmap of top genes
+6. **Reporting**: concise table + short interpretation
+
+## Why these choices (brief)
+- **DESeq2** handles count data with a negative binomial model.
+- **FDR** keeps expected false positives manageable across thousands of genes.
+- **Shrinkage** improves effect-size estimates for low counts.
+
+## Next steps
+- Add a small public dataset (Bioconductor *airway*).
+- Add runnable code blocks and figures.
+- Save results to `outputs/` and link them here.
+
+## Contact
+Questions or feedback?  
+- Email: jwclark1998@gmail.com
+- GitHub: @jwclark1998

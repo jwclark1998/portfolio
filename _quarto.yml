@@ -1,0 +1,15 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Justin Clark — Bioinformatics Portfolio"
+  navbar:
+    left:
+      - href: docs/dge_overview.qmd
+        text: DGE Overview
+
+format:
+  html:
+    theme: cosmo
+    toc: true
